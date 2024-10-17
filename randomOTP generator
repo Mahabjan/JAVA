@@ -1,0 +1,15 @@
+import java.util.Random;
+
+public class SixDigitOTP {
+    public static void main(String[] args) {
+        // Generate a 6-digit OTP
+        String otp = generateOTP();
+        System.out.println("Your OTP is: " + otp);
+    }
+
+    private static String generateOTP() {
+        Random random = new Random();
+        int otpNumber = 100000 + random.nextInt(900000); // Generates a number between 100000 and 999999
+        return String.valueOf(otpNumber);
+    }
+}
